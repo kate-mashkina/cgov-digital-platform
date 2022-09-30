@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="Cypress" />
 import { And, Then, Given, When } from 'cypress-cucumber-preprocessor/steps';
 
 
