@@ -2,7 +2,7 @@ name: CGOV Digital Platform Smoke Tests
 on:  
   schedule:
     # runs tests every day at 7am
-    - cron: '0 12 * * *'
+    - cron: '0 10 * * *'
 jobs:
   smoke:
     runs-on: ubuntu-latest
