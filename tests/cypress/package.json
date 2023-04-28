@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run"
+    "cy:run": "cypress run",
+    "cy:parallel": "cypress-parallel -s cy:run -t 2 -d 'cypress/e2e/Parallel' -m false",
+    "test": "cypress run --spec \"cypress/e2e/CreateSiteSection.feature\" && npm run cy:parallel"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-parallel": "^0.12.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": "true",
@@ -18,6 +21,6 @@
     "commonPath": "cypress/e2e/common"
   },
   "devDependencies": {
-    "cypress": "^10.2.0"
+    "cypress": "^10.9.0"
   }
 }
